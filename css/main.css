@@ -6,6 +6,9 @@ body {
   font-size: 14px;
   color: #333;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 a{
   text-decoration: none;
@@ -45,9 +48,11 @@ a:hover, a:active {
 .hidden {
   display: none;
 }
+@media screen and (min-width: 640px){
 #siteContainer {
   background: #ffffff;
   margin: 0 auto;
+  width: 100%;
   max-width: 1280px;
   height: auto;
 }
@@ -141,6 +146,97 @@ h2 {
   margin-bottom: .5em;
 }
 /*Start of homepage styling*/
+#Hero {
+  width: 100%;
+  max-width:1280px;
+  position: relative;
+}
+#Hero img {
+  width: 100%;
+}
+.hotspot {
+  width: 10px;
+  height: 10px;
+  background: rgb(224,180,107);
+  background: radial-gradient(circle, rgba(224,180,107,1) 25%, rgba(143,109,72,1) 87%);
+  border-radius: 50%;
+  position: absolute;
+  animation: wave 1s infinite;
+  cursor: pointer;
+}
+.right {
+  width: 10px;
+  height: 10px;
+  background: rgb(224,180,107);
+  background: radial-gradient(circle, rgba(224,180,107,1) 25%, rgba(143,109,72,1) 87%);
+  border-radius: 50%;
+  position: absolute;
+  animation: wave 1s infinite;
+  cursor: pointer;
+}
+.one {
+  display: flex;
+  left: 20%;
+  bottom:59%;
+}
+.two {
+  display: flex;
+  right: 45.5%;
+  bottom:60%;
+}
+.three {
+  display: flex;
+  right: 14%;
+  bottom:62%;
+}
+@keyframes wave {
+  from{
+    box-shadow: 0 0 0 0 #d2b897;
+  }
+  to{
+    box-shadow: 0 0 0 5px #d2b897;
+  }
+}
+
+.hotspot::before{
+  content: attr(text);
+  width: max-content;
+  position: absolute;
+  background-color: #45342b;
+  color: #fff;
+  left: 50%;
+  transition: translateX(-50%);
+  top:30%;
+  padding: 8px 20px;
+  font-size: 28px;
+  border-radius: 3px;
+  display: none;
+}
+.right::before{
+  content: attr(text);
+  width: max-content;
+  position: absolute;
+  background-color: #45342b;
+  color: #fff;
+  right: 50%;
+  transition: translateX(-50%);
+  top:30%;
+  padding: 8px 20px;
+  font-size: 28px;
+  border-radius: 3px;
+  display: none;
+}
+
+
+.hotspot:hover::before,
+.hotspot:hover::after {
+  display: block;
+}
+.right:hover::before,
+.right:hover::after {
+  display: block;
+}
+
 .PromoSection {
   display: flex;
   flex-direction: row;
@@ -150,10 +246,14 @@ h2 {
 }
 .Title h2 {
   text-align: center;
+  font-size: 80px;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 .Title p {
   text-align: center;
   font-size: 20px;
+
 }
 
 .btnPaw {
@@ -198,8 +298,31 @@ h2 {
   font-size: 70px;
   transition:
 }
+.Promo-main {
+  width: 100%;
+  max-width:1280px;
+  position: relative;
+}
+.Promo-main img {
+  width: 100%;
+}
 /*End of homepage styling*/
 /*Start of About page styling*/
+.About-para p{
+  font-size: 28px;
+  text-align: center;
+  margin: 10%;
+}
+.About-Hero {
+  width: 100%;
+  max-width:1280px;
+  position: relative;
+
+}
+.About-Hero img {
+  width: 100%;
+}
+
 
 
 /*End of About page styling*/
@@ -378,6 +501,8 @@ h2 {
   font-size: 40px;
   color: #45342b;
   text-align: center;
+}
+
 }
 /*Start of Submit page styling*/
 
