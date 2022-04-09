@@ -82,6 +82,8 @@ a:hover, a:active {
   margin-top: 0;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+
 }
 #mainNav ul li {
   display: block;
@@ -96,8 +98,8 @@ a:hover, a:active {
   flex-wrap: wrap;
   justify-content: center;
   margin: 8em 5em 10em 8em;
-  height: 600px;
-  width: 890px;
+  max-height: 800px;
+  max-width: 890px;
   background: #cb0d18;
   border: 5px solid #e0b46b;
   border-radius: 10px;
@@ -114,8 +116,8 @@ a:hover, a:active {
   flex-direction: row;
   justify-content: space-between;
   padding: 2em 10em 0 10em;
-
 }
+
 button {
   height: 110px;
   width: 249px;
@@ -153,9 +155,7 @@ h2 {
   text-align: center;
   font-size: 20px;
 }
-.bottleIMG {
-  margin-right: 150px;
-}
+
 .btnPaw {
   display: flex;
   flex-direction: column;
@@ -164,7 +164,7 @@ h2 {
   margin-right: 100px;
 }
 .btnPaw img {
-  margin-bottom: 100px;
+  margin-bottom: 20%;
 }
 .DrinkRspnsbyBanner {
   width: 100%;
@@ -313,6 +313,9 @@ h2 {
    margin-left: 25%;
    margin-right: 25%;
  }
+ .contactForm a {
+  margin-left: 25%
+ }
  input[type=text], select, textarea {
    width: 100%;
    padding: 12px;
@@ -322,7 +325,7 @@ h2 {
    margin-top: 6px;
    margin-bottom: 16px;
    font-family: inherit;
-   font-size: 50px;
+   font-size: 28px;
  }
  textarea {
    display: flex;
@@ -341,8 +344,11 @@ h2 {
 #contactTop {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: space-around;
+
 }
+
 .ContactInfo p {
   font-size: 50px;
   color: #cb0d18;
@@ -354,6 +360,28 @@ h2 {
   text-align: center;
 }
 /*end of contact page styling*/
+#SubmitSec {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  margin-top: 5em;
+
+}
+
+.submit p {
+  font-size: 50px;
+  color: #cb0d18;
+  text-align: center;
+}
+.submit p span {
+  font-size: 40px;
+  color: #45342b;
+  text-align: center;
+}
+/*Start of Submit page styling*/
+
+/*End of Submit page styling*/
 
 #foot {
   display: flex;
