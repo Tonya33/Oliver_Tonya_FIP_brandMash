@@ -1,21 +1,32 @@
 (() => {
+  console.log('Welcome to my Final Brand mash-up project!');
 
-  console.log('this is some text');
-
-  let theHeading = document.querySelector("#mainHeader"),
-      theLogo = document.querySelector("#logo"),
-      HeroImg = document.querySelector("#Hero"),
-      
+    let  theLogo = document.getElementById('logo'),
+        paws = document.querySelectorAll(".paw"),
+        mainNav = document.getElementById('mainNav'),
+        bottle = document.querySelector('.bottleIMG'),
+        noBtn = document.getElementById('NO');
 
   function logElement() {
     console.log('clicked on the element:', this.id);
   }
 
-  theHeading.addEventListener("click", logElement);
+  function pawInfo() {
+    console.log('This is the paw element! this is the main design component of the brand mash-up. I took the shape of the "Tyskie beer" crown element and changed it to a paw print to relate to the "Resolve pet cleaner"');
+  }
+  function logbottle() {
+    console.log('clicked on the element: RESOLVE Bottle');
+  }
+  function sorryMsg() {
+    console.log('Sorry! you are not old enough to eneter this site');
+  }
 
-  theLogo.addEventListener('click', logElement);
+  theLogo.addEventListener("click", logElement);
+  mainNav.addEventListener("click", logElement);
 
-  HeroImg.addEventListener('click', logElement);
+  paws.forEach(paw => paw.addEventListener('click', pawInfo));
 
+  bottle.addEventListener("click", logbottle);
+  noBtn.addEventListener("click", sorryMsg);
 
 })();
